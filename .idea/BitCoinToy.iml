@@ -5,8 +5,8 @@
       <sourceFolder url="file://$MODULE_DIR$/BitCoinClient.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Transaction.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/BitCoinService.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Transaction.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Block.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/BitCoinClient.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
     </content>

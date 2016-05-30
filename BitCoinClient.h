@@ -26,11 +26,11 @@ public:
 
     void ProcessTransaction(BitCoinToy::Model::Transaction transaction);
 
-//    void ProcessBlock(BitCoinToy::Model::Block block);
+    void ProcessBlock(BitCoinToy::Model::Block block);
     PK pk;
 private:
     SK sk_;
-//    BitCoinToy::Model::Block block_chain_;
+    std::map<string block_hash, BitCoinToy::Model::Block> block_chain_;
     std::vector<BitCoinClient> peers_;
 };
 

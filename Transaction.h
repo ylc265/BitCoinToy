@@ -8,9 +8,8 @@
 #include <string>
 #include <vector>
 #include <cryptopp/sha.h>
-
-typedef std::string PK;
-typedef std::string SK;
+#include <rsa.h>
+typedef std::string TRANSACTION_HASH;
 
 namespace BitCoinToy
 {
@@ -18,16 +17,14 @@ namespace Model
 {
 class Transaction {
 public:
-    Transaction(std::string from_pk, std::string from_sk, std::string to_pk);
-
-    // see if the signature and the content of signature is correct.
-    bool HasValidSignature();
+    Transaction(TRANSACTION_HASH prev, CryptoPP::RSA::PublicKey s_pk,
+                CryptoPP::RSA::PublicKey r_pk, CryptoPP::RSA::PrivateKey s_sk);
 public:
-    std::string id;
-    std::string prev_transaction_id;
-    byte signature;
-    PK sender;
-    PK receiver;
+    TRANSACTION_HASH current;
+    TRANSACTION_HASH prev;
+    std::string signature;
+    CryptoPP::RSA::PublicKey sender;
+    CryptoPP::RSA::PublicKey receiver;
 };
 }
 }
